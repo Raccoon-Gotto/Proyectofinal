@@ -1,0 +1,58 @@
+<div class="panel-container">
+    <div class="panel">
+        <img src="/imagen1.png" alt="Imagen 1" />
+    </div>
+    <div class="panel">
+        <img src="../../public/imagen2.jpeg" alt="Imagen 2" />
+    </div>
+    <div class="panel">
+        <img src="../../public/imagen3.jpeg" alt="Imagen 3" />
+    </div>
+</div>
+
+<style>
+    .panel-container {
+        position: relative;
+        overflow: hidden;
+        height: 1000px;
+    }
+
+    .panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    .panel.active {
+        transform: translateX(0);
+    }
+
+    .panel.next {
+        transform: translateX(100%);
+    }
+</style>
+
+<script>
+    var panels = document.querySelectorAll(".panel");
+    var currentPanelIndex = 0;
+    var interval = 5000; // Cambia cada 3 segundos (3000 ms)
+
+    function showNextPanel() {
+        panels[currentPanelIndex].classList.remove("active");
+        panels[currentPanelIndex].classList.add("next");
+
+        currentPanelIndex = (currentPanelIndex + 1) % panels.length;
+
+        panels[currentPanelIndex].classList.add("active");
+        panels[currentPanelIndex].classList.remove("next");
+    }
+
+    function startPanelRotation() {
+        setInterval(showNextPanel, interval);
+    }
+
+    startPanelRotation();
+</script>

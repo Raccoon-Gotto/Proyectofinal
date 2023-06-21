@@ -1,0 +1,121 @@
+---
+---
+
+<div class="main-contenedor">
+    <div class="contenedor1"></div>
+    <div class="contenedor2"></div>
+    <div class="contenedor3"></div>
+</div>
+<input type="button" class="boton" value="contactanos"></input>
+
+<style>
+    .boton{
+        border: #fff;
+        background-color: #red
+        ;
+    }
+
+    .main-contenedor {
+        display: flex;
+        margin: 60px 0;
+    }
+
+    .contenedor1 {
+        width: 30%;
+        height: 200px;
+        background-image: url("marketingDigital.jpg");
+        color: #fff;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: filter 0.3s aese;
+        position: relative;
+    }
+    .contenedor2 {
+        width: 30%;
+        height: 200px;
+        background-image: url("capacitacion.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contenedor3 {
+        width: 30%;
+        height: 200px;
+        background-image: url("consultoria.jpg");
+        color: #fff;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor1:hover {
+        filter: brightness(70%);
+    }
+
+    .contenedor2:hover {
+        filter: brightness(70%);
+    }
+
+    .contenedor3:hover {
+        filter: brightness(70%);
+    }
+
+    p {
+        text-align: center;
+    }
+</style>
+
+<script>
+    //1ro
+    const contenedor1 = document.querySelector(".contenedor1");
+    contenedor1.addEventListener("mouseover", function () {
+        const item1 = document.createElement("p");
+        item1.setAttribute("id", "texto1");
+        item1.innerHTML =
+            "Servicios para aumentar tu exposición de marca y generar más prospectos online.";
+        contenedor1.appendChild(item1);
+    });
+
+    contenedor1.addEventListener("mouseout", function () {
+        const parrafo1 = document.getElementById("texto1");
+        contenedor1.removeChild(parrafo1);
+    });
+    //2do
+    const contenedor2 = document.querySelector(".contenedor2");
+    contenedor2.addEventListener("mouseover", function () {
+        const item2 = document.createElement("p");
+        item2.setAttribute("id", "texto2");
+        item2.innerHTML =
+            "Programas personalizados para aumentar el skill digital de tu empresa.";
+        contenedor2.appendChild(item2);
+    });
+
+    contenedor2.addEventListener("mouseout", function () {
+        const parrafo2 = document.getElementById("texto2");
+        contenedor2.removeChild(parrafo2);
+    });
+    //3ro
+    const contenedor3 = document.querySelector(".contenedor3");
+    contenedor3.addEventListener("mouseover", function () {
+        const item3 = document.createElement("p");
+        item3.setAttribute("id", "texto3");
+        item3.innerHTML =
+            "Nos enfocamos en la necesidad puntual de tu campaña de marketing co-creando la estrategia de tu marca y armando los embudos de venta.";
+        contenedor3.appendChild(item3);
+    });
+
+    contenedor3.addEventListener("mouseout", function () {
+        const parrafo3 = document.getElementById("texto3");
+        contenedor3.removeChild(parrafo3);
+    });
+</script>

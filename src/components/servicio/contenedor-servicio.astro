@@ -1,0 +1,94 @@
+---
+import Servicios from "./servicios.astro";
+---
+
+<div class="contenedor">
+    <h1>Nuestros Servicios</h1>
+    <div class="grid">
+        <Servicios
+            titulo="Social Media Marketing"
+            imagen="1.png"
+            p1="Community manager (Gestión de redes sociales)."
+            p2="Auditoria de redes sociales."
+            p3="Monitoreo de marca online."
+            p4="Métrica y medición de resultados."
+            check5=""
+        />
+        <Servicios
+            titulo="Marketing Online"
+            imagen="2.png"
+            p1="SEO - Poscisionamiento de páginas web en los primeros puestos de buscadores."
+            p2="SEM - Gestión y creación de avisos en Google Ads."
+            p3="Creación y gestión de avisos en redes sociales."
+            p4="Campaña de retargeting."
+            check5=""
+        />
+        <Servicios
+            titulo="Consultoría de Empresas"
+            imagen="3.png"
+            p1="Asesoría de marketing digital."
+            p2="Analítica digital web."
+            p3="Medición de resultados."
+            p4="Identidad corporativa y marketing."
+            check5=""
+        />
+        <Servicios
+            titulo="Desarrollo y Diseño Web"
+            imagen="4.png"
+            p1="Sitios transaccionales."
+            p2="Blogs empresariales."
+            p3="Lading page para captar leads (Captación de formularios y posibles clientes)."
+            check4=""
+            check5=""
+        />
+        <Servicios
+            titulo="BrandCar"
+            imagen="5.png"
+            p1="Haz que tu marca recorra toda la ciudad."
+            p2="Brandeo en autos de aplicaciones por toda la ciudad de Lima"
+            check3=""
+            check4=""
+            check5=""
+        />
+        <Servicios
+            titulo="Activaciones y anfitrionaje"
+            imagen="1.png"
+            p1="Manejo de pequeño, mediano y gran influencer para tu marca en redes sociales."
+            p2="Activamos tu marca y aumentamos el número de audiencia en redes sociales."
+            check3=""
+            check4=""
+            check5=""
+        />
+        <Servicios
+            titulo="Producción audiovisual"
+            imagen="1.png"
+            p1="Creación de reels para redes sociales."
+            p2="Spots de marcas."
+            p3="Unboxing."
+            p4="Fotografía de producto."
+            p5="Fotografía corporativa y cobertura de eventos."
+        />
+    </div>
+</div>
+
+<style>
+    .contenedor {
+        margin: 125px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        margin: 30px;
+        gap: 60px;
+    }
+
+    h1 {
+        color: #c9182b;
+        text-align: center;
+        margin: 70px 0px;
+    }
+</style>

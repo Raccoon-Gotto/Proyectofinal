@@ -1,0 +1,74 @@
+---
+interface Props {
+  titulo? : string
+  imagen? : string
+  p1? : string
+  p2? : string
+  p3? : string
+  p4? : string
+  p5? : string
+  check1? : string
+  check2? : string
+  check3? : string
+  check4? : string
+  check5? : string
+}
+
+const {titulo = "titulo por defecto", imagen = "imagen por defecto", p1 = "", p2 = "",p3 = "",p4 = "",p5 = "",check1="check.png",check2="check.png",check3="check.png",check4="check.png",check5="check.png",} = Astro.props
+---
+
+    <div class="container">
+      <img src={imagen} />
+      <h3>{titulo}</h3>
+      <div class="container-item">
+        <img src={check1} class="check" />
+        <p>{p1}</p>
+      </div>
+      <div class="container-item">
+        <img src={check2} class="check" />
+        <p>{p2}</p>
+      </div>
+      <div class="container-item">
+        <img src={check3} class="check" />
+        <p>{p3}</p>
+      </div>
+      <div class="container-item">
+        <img src={check4} class="check" />
+        <p>{p4}</p>
+      </div> <div class="container-item">
+        <img src={check5} class="check" />
+        <p>{p5}</p>
+      </div>
+      <a class="" href="https://www.google.com"><p>Contactanos</p></a>
+    </div>
+
+    <style>
+      .container {
+        
+      }
+
+      img {
+        max-width: 100px ;
+        width: 80%;
+      }
+
+      h3 {
+        color: #c9182b;
+      }
+
+      .check {
+        width: 10px;
+        height: 10px;
+        margin-right: 8px;
+      }
+
+      .container-item {
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        color: #333;
+        background-color: red;
+      }
+    </style>
